@@ -17,11 +17,32 @@ kali-tools-forensics
 # Graphical desktop
 kali-desktop-xfce
 
+# Git package pre-reqs
+git
+python3-pip
+#python-pip
+python-dev
+build-essential
+python2.7-dev
+#python-pyexiv2
+python-openssl
+python2
+python-dnspython
+#python-requests
+python-argparse
+build-essential
+libsqlite3-dev
+libseccomp-dev
+libsodium-dev
+publicsuffix
+cargo
+pkg-config
+
 # Custom tools
 python3
 spiderfoot
 sherlock
-maltego
+# maltego - throws a postgresql error
 python3-shodan
 theharvester
 webhttrack
@@ -36,3 +57,10 @@ chromium
 torbrowser-launcher
 tor
 firefox-esr
+
+#browser extensions
+webext-https-everywhere
+webext-browserpass
+webext-ublock-origin
+webext-privacy-badger
+webext-bulk-media-downloader
