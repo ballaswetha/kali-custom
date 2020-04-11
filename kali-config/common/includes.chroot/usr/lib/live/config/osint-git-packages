@@ -63,8 +63,8 @@ export PATH=""/root/.cargo/bin:$PATH""
 source ~/.bashrc
 
 #apt-get install -y python3-pip
--H pip3 install -U checkdmarc
--H pip3 install -U git+https://github.com/domainaware/checkdmarc.git
+pip3 install -U checkdmarc
+pip3 install -U git+https://github.com/domainaware/checkdmarc.git
 git clone https://github.com/s0md3v/Photon.git /usr/Photon
 
 EOS
