@@ -17,3 +17,5 @@ config/source
 simple-cdd/debian-cd
 simple-cdd/profiles/kali.downloads
 simple-cdd/tmp
+build.log
+squid.conf

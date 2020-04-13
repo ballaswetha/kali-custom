@@ -1,0 +1,70 @@
+#!/bin/sh
+
+cat <<EOS | sudo bash
+
+echo "deb http://http.kali.org/kali kali-last-snapshot main non-free contrib" | sudo tee /etc/apt/sources.list
+apt-get install software-properties-common -y
+apt-get update 
+apt-get upgrade -y
+apt-get install -y python-pip
+cargo build --release
+#apt-get install -y python3-pip git python-pip rubygems cargo libsodium-dev publicsuffix pkg-config
+#apt-get install -y python3-pip git python-pip rubygems cargo libsqlite3-dev libseccomp-dev libsodium-dev publicsuffix pkg-config
+pip3 install --upgrade virtualenv
+pip3 install --upgrade tweepy
+pip3 install --upgrade pillow
+pip3 install --upgrade exifread
+pip3 install --upgrade jinja2
+pip3 install --upgrade oauth2
+pip3 install --upgrade youtube-dl
+
+git clone https://github.com/xHak9x/fbi.git /usr/fbi
+cd /usr/fbi
+pip3 install --user --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+
+git clone https://github.com/hatlord/Spiderpig.git /usr/Spiderpig
+cd /usr/Spiderpig
+gem install anemone yomu trollop colorize luhn ipaddress exiftool_vendored exiftool
+
+git clone https://github.com/securing/DumpsterDiver.git /usr/DumpsterDiver
+cd /usr/DumpsterDiver
+pip3 install -r requirements.txt
+
+git clone https://github.com/m4ll0k/Infoga.git /usr/infoga
+cd /usr/infoga
+python setup.py install
+python infoga.py
+
+pip3 install h8mail
+pip3 install instaloader
+
+git clone https://github.com/Lulz3xploit/LittleBrother /usr/LittleBrother
+cd /usr/LittleBrother
+pip3 install -r requirements.txt
+
+git clone https://github.com/am0nt31r0/OSINT-Search.git /usr/OSINT-Search
+cd /usr/OSINT-Search
+pip3 install -r requirements.txt
+
+pip3 install git+https://github.com/abenassi/Google-Search-API --upgrade
+pip3 install https://github.com/PaulSec/API-dnsdumpster.com/archive/master.zip --user
+
+git clone https://github.com/xillwillx/skiptracer.git  /usr/skiptracer
+cd /usr/skiptracer
+pip3 install -r requirements.txt
+
+git clone https://github.com/aboul3la/Sublist3r.git /usr/Sublist3r
+cd /usr/Sublist3r/
+pip3 install -r requirements.txt
+
+git clone https://github.com/kpcyrd/sn0int.git /usr/sn0int
+cd /usr/sn0int
+cargo install -f --path .
+export PATH=""/root/.cargo/bin:$PATH""
+source ~/.bashrc
+
+pip3 install -U checkdmarc
+pip3 install -U git+https://github.com/domainaware/checkdmarc.git
+git clone https://github.com/s0md3v/Photon.git /usr/Photon
+
+EOS

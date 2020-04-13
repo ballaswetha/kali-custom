@@ -20,15 +20,12 @@ kali-desktop-xfce
 # Git package pre-reqs
 git
 python3-pip
-#python-pip
 python-dev
 build-essential
 python2.7-dev
-#python-pyexiv2
 python-openssl
 python2
 python-dnspython
-#python-requests
 python-argparse
 build-essential
 libsqlite3-dev
@@ -37,6 +34,13 @@ libsodium-dev
 publicsuffix
 cargo
 pkg-config
+rubygems 
+libtool
+libssl-doc
+libc6-dev
+libseccomp2
+libsqlite3-0
+sqlite3-doc
 
 # Custom tools
 python3
@@ -51,6 +55,7 @@ stegosuite
 anbox
 wireshark
 openvpn
+metagoofil
 
 # Browsers
 chromium
