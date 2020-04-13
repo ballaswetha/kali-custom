@@ -19,13 +19,14 @@ kali-desktop-xfce
 
 # Git package pre-reqs
 git
+python3
 python3-pip
 python-dev
 build-essential
 python2.7-dev
 python-openssl
 python2
-python-dnspython
+#python-dnspython
 python-argparse
 build-essential
 libsqlite3-dev
@@ -41,9 +42,9 @@ libc6-dev
 libseccomp2
 libsqlite3-0
 sqlite3-doc
+ruby-dev
 
 # Custom tools
-python3
 spiderfoot
 sherlock
 # maltego - throws a postgresql error
