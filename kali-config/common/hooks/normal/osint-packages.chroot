@@ -20,6 +20,8 @@ pip3 install --upgrade youtube-dl
 
 git clone https://github.com/xHak9x/fbi.git /usr/fbi
 cd /usr/fbi
+pip3 install -r requirements.txt
+
 pip3 install --user --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
 git clone https://github.com/hatlord/Spiderpig.git /usr/Spiderpig
@@ -45,7 +47,6 @@ pip3 install -r requirements.txt
 git clone https://github.com/am0nt31r0/OSINT-Search.git /usr/OSINT-Search
 cd /usr/OSINT-Search
 pip3 install -r requirements.txt
-
 pip3 install git+https://github.com/abenassi/Google-Search-API --upgrade
 pip3 install https://github.com/PaulSec/API-dnsdumpster.com/archive/master.zip --user
 
